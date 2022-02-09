@@ -1,17 +1,20 @@
 <template>
+  <!-- Template that show the details of a movie -->
   <div>
-   <!--  <b-button id="show-btn" @click="$bvModal.show('bv-modal-example')"
-      >Open Modal</b-button
-    > -->
-
-    <b-modal id="bv-modal-movie" hide-footer>
+    <b-modal
+      id="bv-modal-movie"
+      scrollable
+      title="Movie Details"
+      hide-footer
+    >
       <template #modal-title>
         <b>Movie Details</b>
       </template>
+
       <div class="d-block">
         <table class="table table-striped">
           <thead>
-            <tr>
+            <tr class="bg-dark text-white">
               <th>Field</th>
               <th>Value</th>
             </tr>
@@ -28,7 +31,11 @@
             <tr>
               <td>belongs to collection</td>
               <td>
-                  {{ movie.belongs_to_collection != null ? movie.belongs_to_collection.name : 'No'}}
+                {{
+                  movie.belongs_to_collection != null
+                    ? movie.belongs_to_collection.name
+                    : "No"
+                }}
               </td>
             </tr>
 
@@ -140,7 +147,7 @@
             </tr>
             <tr>
               <td>video</td>
-              <td>{{ movie.video ? 'YES' : 'No'}}</td>
+              <td>{{ movie.video ? "YES" : "No" }}</td>
             </tr>
             <tr>
               <td>vote average</td>
@@ -152,12 +159,15 @@
             </tr>
           </tbody>
         </table>
-       
       </div>
 
-      <b-button class="mt-3" block @click="$bvModal.hide('bv-modal-movie')"
-        >Close</b-button
-      >
+      <div class="row">
+        <div class="col text-center">
+          <button @click="$bvModal.hide('bv-modal-movie')" class="btn btn-dark">
+            Close
+          </button>
+        </div>
+      </div>
     </b-modal>
   </div>
 </template>
@@ -165,17 +175,11 @@
 
 <script>
 export default {
- 
   props: {
     movie: {
       required: true,
       type: Object,
-    },
-    show: {
-      default: false,
-      required: false,
-      type: Boolean,
-    },
-  }
+    }
+  },
 };
 </script>

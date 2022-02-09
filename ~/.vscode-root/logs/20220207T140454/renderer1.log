@@ -1,0 +1,7 @@
+[2022-02-07 14:04:58.841] [renderer1] [info] IExtensionHostStarter.start() took 17 ms.
+[2022-02-07 14:05:00.002] [renderer1] [error] [Extension Host] (node:56275) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+(Use `code --trace-deprecation ...` to show where the warning was created)
+[2022-02-07 14:05:09.030] [renderer1] [error] Error while registering log channel file:///home/anniel/Frontend/Vue-projects/movie-app/~/.vscode-root/logs/20220207T140454/userDataSync.log Timed out while waiting for file to be created
+[2022-02-07 14:05:12.885] [renderer1] [info] IExtensionHostStarter.start() took 27 ms.
+[2022-02-07 14:05:13.251] [renderer1] [error] [Extension Host] (node:56416) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+(Use `code --trace-deprecation ...` to show where the warning was created)
