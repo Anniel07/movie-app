@@ -60,10 +60,10 @@
       <!-- for show the modal with the movie details  -->
       <movie-modal v-bind:movie="movie" />
 
-      <h2 class="text-success" v-if="emptySearch">
+      <h2 class="text-success" v-if="emptySearch" :style="marginTop">
         Enter a text in the input and click search button
       </h2>
-      <h2 class="text-danger" v-else-if="movies.length == 0">
+      <h2 class="text-danger" v-else-if="movies.length == 0" :style="marginTop">
         No results found
       </h2>
       <div v-else class="overflow-auto">
@@ -119,6 +119,11 @@ export default {
       perPage: 20,
       currentPage: 1,
       rows: 1, // total of results
+
+      //style for see msg when access from phone
+      marginTop: {
+        marginTop : '35px'
+      },
     };
   },
 
